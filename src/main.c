@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include "main.h"
 
 int main(int argc, char const *argv[])
@@ -47,8 +48,7 @@ int main(int argc, char const *argv[])
             break;
         }
 
-        printf("Press any key to continue...\n");
-        getchar();
+        _sleep(1000);
 
     } while (choice != 5);
 
