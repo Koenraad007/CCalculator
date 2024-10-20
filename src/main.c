@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int addition();
+#include "main.h"
 
 int main(int argc, char const *argv[])
 {
@@ -33,6 +32,7 @@ int main(int argc, char const *argv[])
             break;
         case 2:
             printf("You chose subtraction\n");
+            subtraction();
             break;
         case 3:
             printf("You chose multiplication\n");
@@ -55,6 +55,14 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
+/**
+ * Prompts the user for two numbers, calculates their sum, and prints the result.
+ *
+ * This function is an implementation detail of the calculator application. It is
+ * called from the main menu when the user selects the "Addition" option.
+ *
+ * @return 0 on successful completion.
+ */
 int addition()
 {
     printf("What is the first number?\n");
@@ -64,6 +72,27 @@ int addition()
     int num2 = 0;
     scanf("%d", &num2);
     printf("The sum of %d and %d is %d\n", num1, num2, num1 + num2);
+
+    return 0;
+}
+
+/**
+ * Prompts the user for two numbers, calculates their difference, and prints the result.
+ *
+ * This function is an implementation detail of the calculator application. It is
+ * called from the main menu when the user selects the "Subtraction" option.
+ *
+ * @return 0 on successful completion.
+ */
+int subtraction()
+{
+    printf("What is the first number?\n");
+    int num1 = 0;
+    scanf("%d", &num1);
+    printf("What is the second number?\n");
+    int num2 = 0;
+    scanf("%d", &num2);
+    printf("The difference of %d and %d is %d\n", num1, num2, num1 - num2);
 
     return 0;
 }
